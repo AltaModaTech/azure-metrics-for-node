@@ -1,0 +1,38 @@
+{
+  "name": "azure-metrics-sample-uic",
+  "author": {
+    "name": "J Burnett",
+    "company": "AltaModa Technologies, LLC"
+  },
+  "version": "0.0.1",
+  "description": "Sample NodeJS app using Windows Azure Storage Metrics Client Library",
+  "tags": [
+    "azure-metrics",
+    "azure-metrics-for-node",
+    "sdk",
+    "sample"
+  ],
+  "keywords": [
+    "node",
+    "azure",
+    "metrics",
+    "azure metrics"
+  ],
+  "main": "./node/app.js",
+  "engines": {
+    "node": ">= 0.6.15"
+  },
+  "licenses": [
+    {
+      "type": "Apache",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "dependencies": {
+    "azure-metrics-for-node": ">= 0.8.2",
+    "express":  ">= 3.0.0",
+    "ejs":      ">= 0.8.2"
+  },
+  "devDependencies": {
+  }
+}
