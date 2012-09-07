@@ -1,4 +1,4 @@
-# Windows Azure SDK for Node.js
+# Windows Azure Storage Metrics SDK for Node.js
 
 This project provides a Node.js package that makes it easy to access Windows Azure Storage Metrics.
 
@@ -20,14 +20,14 @@ For documentation on how to host Node.js applications on Windows Azure, please s
 
 To get the source code of the SDK via **git** just type:
 
-    git clone https://github.com/jburnett/azure-metrics.git
-    cd ./azure-metrics
+    git clone https://github.com/AltaModaTech/azure-metrics-for-node.git
+    cd ./azure-metrics-for-node
 
 ## Download Package
 
 Alternatively, to get the source code via the Node Package Manager (npm), type
 
-    npm install azure-metrics
+    npm install azure-metrics-for-node
 
 You can use these packages against the cloud Windows Azure Services.
 
@@ -37,7 +37,7 @@ You can use these packages against the cloud Windows Azure Services.
 ```Javascript
 var opts = {};
 opts.beginDate = new Date().addDays(-5);    // Retrieve the last 5 days of metrics
-var metricsService = azure-metrics.createMetricsService();
+var metricsService = azureMetrics.createMetricsService();
 metricsService.getBlobCapacities( opts, function(error, capacityEntities){
     if(error === null){
         // use capacityEntities JSON data
