@@ -46,7 +46,7 @@ metricsService.getBlobCapacities( opts, function(error, capacityEntities){
 ```
 
 
-If you encounter any bugs with the library please file an issue in the [Issues](https://github.com/jburnett/azure-metrics/issues) section of the project.
+If you encounter any bugs with the library please file an issue in the [Issues](https://github.com/AltaModaTech/azure-metrics-for-node/issues) section of the project.
 
 # Learn More
 [Windows Azure Node.js Developer Center](http://www.windowsazure.com/en-us/develop/nodejs/)
