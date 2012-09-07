@@ -34,7 +34,7 @@ suite('Verify constants', function () {
   });
 
   test('Constants exists', function (done) {
-    assert.notEqual(azmet.Constants, null);
+    should.exist( azmet.Constants );
     done();
   });
 

@@ -1,13 +1,14 @@
 {
-  "name": "azure-metrics",
+  "name": "azure-metrics-for-node",
   "author": {
     "name": "J Burnett",
     "company": "AltaModa Technologies, LLC"
   },
   "version": "0.8.2",
-  "description": "Windows Azure Storage Metrics Client Library",
+  "description": "Windows Azure Storage Metrics Client Library for NodeJS",
   "tags": [
     "azure-metrics",
+    "azure-metrics-for-node",
     "sdk"
   ],
   "keywords": [
@@ -28,19 +29,21 @@
   ],
   "dependencies": {
     "azure": ">= 0.6.2",
+    "underscore": ">= 1.3.3",
     "util": ">= 0.4.9"
   },
   "devDependencies": {
+    "datejs":   "0.0.2",
     "mocha":    ">= 1.4.0",
     "should":   ">= 1.1.0"
   },
-  "homepage": "http://github.com/jburnett/azure-metrics",
+  "homepage": "http://github.com/AltaModaTech/azure-metrics-for-node",
   "repository": {
     "type": "git",
-    "url": "git@github.com:jburnett/azure-metrics"
+    "url": "git@github.com:AltaModaTech/azure-metrics-for-node.git"
   },
   "bugs": {
-    "url": "http://github.com/jburnett/azure-metrics/issues"
+    "url": "http://github.com/AltaModaTech/azure-metrics-for-node/issues"
   },
   "scripts": {
     "test": "make test"
@@ -48,8 +51,8 @@
   "bin": {
     "azure-metrics": "./bin/azure-metrics"
   },
-  "readme": "See README.md at http://github.com/jburnett/azure-metrics",
+  "readme": "See README.md at http://github.com/AltaModaTech/azure-metrics-for-node",
   
-  "_id": "azure-metrics@0.8.2",
+  "_id": "azure-metrics-for-node@0.8.2",
   "_from": "azure"
 }
