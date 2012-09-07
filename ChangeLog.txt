@@ -1,0 +1,12 @@
+2012.08.28 Version 0.8.0
+ * Initial Release
+
+ 2012.08.28 Version 0.8.1
+ * Added examples that dump JSON results for each of Azure's Storage Metric tables
+ * Cleaned out some useless comments
+ 
+ 2012.08.31 Version 0.8.2
+ * Feature: Filter by date range
+ * Converted tests to Mocha framework
+ * Added lots of tests
+ * A little code clean up

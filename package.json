@@ -1,0 +1,55 @@
+{
+  "name": "azure-metrics",
+  "author": {
+    "name": "J Burnett",
+    "company": "AltaModa Technologies, LLC"
+  },
+  "version": "0.8.2",
+  "description": "Windows Azure Storage Metrics Client Library",
+  "tags": [
+    "azure-metrics",
+    "sdk"
+  ],
+  "keywords": [
+    "node",
+    "azure",
+    "metrics",
+    "azure metrics"
+  ],
+  "main": "./lib/azure-metrics.js",
+  "engines": {
+    "node": ">= 0.6.15"
+  },
+  "licenses": [
+    {
+      "type": "Apache",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "dependencies": {
+    "azure": ">= 0.6.2",
+    "util": ">= 0.4.9"
+  },
+  "devDependencies": {
+    "mocha":    ">= 1.4.0",
+    "should":   ">= 1.1.0"
+  },
+  "homepage": "http://github.com/jburnett/azure-metrics",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jburnett/azure-metrics"
+  },
+  "bugs": {
+    "url": "http://github.com/jburnett/azure-metrics/issues"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "bin": {
+    "azure-metrics": "./bin/azure-metrics"
+  },
+  "readme": "See README.md at http://github.com/jburnett/azure-metrics",
+  
+  "_id": "azure-metrics@0.8.2",
+  "_from": "azure"
+}
