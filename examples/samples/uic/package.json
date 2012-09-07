@@ -30,7 +30,7 @@
   ],
   "dependencies": {
     "azure-metrics-for-node": ">= 0.8.2",
-    "express":  ">= 3.0.0",
+    "express":  ">= 2.4.3",
     "ejs":      ">= 0.8.2"
   },
   "devDependencies": {
