@@ -4,7 +4,7 @@
     "name": "J Burnett",
     "company": "AltaModa Technologies, LLC"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Sample NodeJS app using Windows Azure Storage Metrics Client Library",
   "tags": [
     "azure-metrics",

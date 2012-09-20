@@ -4,7 +4,7 @@
     "name": "J Burnett",
     "company": "AltaModa Technologies, LLC"
   },
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "Windows Azure Storage Metrics Client Library for NodeJS",
   "tags": [
     "azure-metrics",
@@ -19,7 +19,7 @@
   ],
   "main": "./lib/azure-metrics.js",
   "engines": {
-    "node": ">= 0.6.15"
+    "node": ">= 0.8.0"
   },
   "licenses": [
     {
@@ -28,7 +28,7 @@
     }
   ],
   "dependencies": {
-    "azure": ">= 0.6.2",
+    "azure": ">= 0.6.4",
     "underscore": ">= 1.3.3",
     "util": ">= 0.4.9"
   },
@@ -53,6 +53,6 @@
   },
   "readme": "See README.md at http://github.com/AltaModaTech/azure-metrics-for-node",
   
-  "_id": "azure-metrics-for-node@0.8.2",
+  "_id": "azure-metrics-for-node@0.8.3",
   "_from": "azure"
 }
