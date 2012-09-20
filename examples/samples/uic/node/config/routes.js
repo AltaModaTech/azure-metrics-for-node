@@ -34,6 +34,11 @@ module.exports = function(app) {
         res.sendfile(filePath); 
     });
 
+    app.get('/css/*', function(req, res) {
+        var filePath = path.join( __dirname, '/..' + req.url );
+        res.sendfile(filePath); 
+    });
+
     
     app.get('/blob/capacities', function(req, res) {
         var azm = azmet.createMetricsService();

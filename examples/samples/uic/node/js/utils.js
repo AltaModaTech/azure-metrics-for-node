@@ -20,17 +20,37 @@ function Utils() {
 // Static method for converting JSON data to simple html table
 Utils.createMetricsTable = function (data) {
     var tblOuter = $('<table />');
+    var tblHeader = $('<thead />');
+    var tblBody = $('<tbody />');
+    var headerInserted = false;
         
     $.each(data, function(key, metrics) {
-        var tblRowOuter = $('<tr/>').appendTo(tblOuter);
-        var tblRowInner = $('<tr/>');
+        var tblRow = $('<tr />');
         
         $.each(metrics, function(name, value) {
-            $('<td>' + name + ': ' + value + '</td>').appendTo(tblRowInner);
+            if ( !headerInserted ) {
+                tblHeader.append( $('<td>' + name + '</td>' ));
+//                $('<td>' + name + '</td>').appendTo( tblHeader );
+            }
+
+            tblRow.append( $('<td>' + value + '</td>') );
+//            $('<td>' + value + '</td>').appendTo( tblRow );
         });
         
-        (tblRowInner.appendTo($('<table />'))).appendTo(tblRowOuter);
+        if ( !headerInserted ) {
+            tblOuter.append( tblHeader );
+//            tblHeader.appendTo( tblOuter );
+            headerInserted = true;
+            console.log( 'tblHeader: ' + tblHeader + '; len: ' + tblHeader.length );
+        }
+
+        tblBody.append( tblRow );
+//        tblRow.appendTo( tblBody );
     });
-    
+
+    tblOuter.append( tblBody );
+//    tblBody.appendTo( tblOuter );
     $("#metrics-container").append( tblOuter );
+    
+    console.log('EXIT: Util.createMetricsTable');
 }
