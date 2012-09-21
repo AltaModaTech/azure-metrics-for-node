@@ -1,14 +1,12 @@
 table {
-    border-style:   solid;
-    border-width:   3px;
     border-collapse:collapse;
 }
 
-table, th, td
+table, td
 {
     border: 1px solid black;
 }
 
-th {
+thead td, th {
     font-weight:    bold;
 }

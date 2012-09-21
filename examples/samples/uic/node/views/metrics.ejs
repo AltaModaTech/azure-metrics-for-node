@@ -14,17 +14,45 @@
     <script src="../js/utils.js"></script>
     
     <script type="text/javascript">
-    
+        function updateMetrics() {
+            console.log('dateBegin on page: ' + $('#dateBegin').val() );
+            console.log('dateEnd on page: ' + $('#dateEnd').val() );
+            $.getJSON("/blob/transactions", {"beginDate": "20120912", "endDate": "20121231"}, Utils.createMetricsTable );
+        }
+        
         function bodyLoaded() {
-            $.getJSON("/blob/transactions", {"JB": 7466}, Utils.createMetricsTable );
+            updateMetrics();
+        }
+        
+        function refresh_click() {
+            updateMetrics();
         }
         
     </script>
     
 </head>
-<body onload="bodyLoaded();">
+<body onload="">
     <h3><u>Capacity Metrics sourced using <a href="http://backbonejs.org/">BackboneJS</a></u></h3>
-    <h3><u>Transaction Metrics</u></h3>
+    <h3><u>Transaction Metrics</u></h3> 
+    <br />
+    
+    <table>
+     <tbody>
+      <tr>
+       <td>Begin Date</td><td>End Date</td>
+      </tr>
+      <tr>
+       <td>
+        <input type="text" name="dateBegin" value="1/1/2012" />
+       </td>
+       <td>
+        <input type="text" name="dateEnd" value="12/31/2012" />
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <br />
+    <input type="button" name="refresh" onclick="refresh_click();" value="Refresh" />
     
     <div id="metrics-container" />
     

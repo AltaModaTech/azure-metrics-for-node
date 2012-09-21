@@ -58,7 +58,29 @@ module.exports = function(app) {
     app.get('/blob/transactions', function(req, res) {
         var azm = azmet.createMetricsService();
         if (azm) {
-            azm.getBlobTransactions( function(err, content) {
+            console.log("Request param, beginDate: " + ( req.query["beginDate"] || "[null]" ));
+            console.log("Request param, endDate: " + ( req.query["endDate"] || "[null]" ));
+
+            var opts = {};
+            opts.beginDate = req.query["beginDate"] ;
+            opts.endDate = req.query["endDate"];
+            
+        /*    
+            var dBegin = req.query["beginDate"];
+            var dEnd = req.query["endDate"];
+            if ( dBegin || !dEnd ) {
+                opts = {};
+                if ( !dBegin ) {
+                    opts.beginDate = dBegin.toString('yyyyMMdd');
+                }
+                if ( !dEnd ) {
+                    opts.endDate = dEnd.toString('yyyyMMdd');
+                }
+                console.log("Begin, end dates: " + (opts.beginDate || "[null]") + ", " + (opts.endDate || "[null]") );
+            }
+        */    
+            
+            azm.getBlobTransactions( opts, function(err, content) {
                 if (err) res.writeHead(500, err.message);
                 else if (!content.length) res.writeHead(404);
                 else {
